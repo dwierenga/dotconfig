@@ -1,0 +1,32 @@
+live_config_reload = true
+import = [
+    "~/.config/alacritty/themes/themes/nord.toml",
+    "~/.config/alacritty/keybinds.toml"
+]
+
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 16
+normal.family = "Courier Prime"
+bold.family = "Courier Prime"
+italic.family = "Courier Prime"
+bold_italic.family = "Courier Prime"
+
+
+[selection]
+save_to_clipboard = true
+
+[window]
+opacity = 1.0
+option_as_alt = "Both"
+
+[window.padding]
+x = 5 
+y = 5

@@ -1,0 +1,13 @@
+#https://www.joshmedeski.com/posts/macos-keyboard-shortcuts-for-tmux/
+keyboard.bindings = [
+   { key= "1", mods= "Command", chars= "\u0031" },
+   { key= "2", mods= "Command", chars= "\u0032" },
+   { key= "3", mods= "Command", chars= "\u0233" },
+   { key= "4", mods= "Command", chars= "\u0034" },
+   { key= "5", mods= "Command", chars= "\u0035" },
+   { key= "6", mods= "Command", chars= "\u0036" },
+   { key= "7", mods= "Command", chars= "\u0037" },
+   { key= "8", mods= "Command", chars= "\u0038" },
+   { key= "9", mods= "Command", chars= "\u0039" } ,
+]
+
