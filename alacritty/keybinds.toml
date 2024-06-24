@@ -9,5 +9,8 @@ keyboard.bindings = [
    { key= "7", mods= "Command", chars= "\u0037" },
    { key= "8", mods= "Command", chars= "\u0038" },
    { key= "9", mods= "Command", chars= "\u0039" } ,
+   { key= "j", mods= "Command", chars= "\u0002" },  # let Cmd-j send Ctrl-b for the tmux prefix
+
+
 ]
 
