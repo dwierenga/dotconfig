@@ -1,6 +1,3 @@
 [submodule "alacritty/themes"]
 	path = alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme
-[submodule "vim"]
-	path = vim
-	url = git@github.com:dwierenga/vim.git
