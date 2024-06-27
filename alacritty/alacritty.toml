@@ -4,13 +4,12 @@ import = [
     "~/.config/alacritty/keybinds.toml"
 ]
 
-
 [cursor.style]
 blinking = "Off"
 shape = "Block"
 
 [env]
-TERM = "xterm-256color"
+TERM = "alacritty"
 
 [font]
 size = 16
@@ -18,6 +17,7 @@ normal.family = "Courier Prime"
 bold.family = "Courier Prime"
 italic.family = "Courier Prime"
 bold_italic.family = "Courier Prime"
+
 
 
 [selection]
