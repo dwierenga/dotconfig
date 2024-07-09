@@ -35,6 +35,8 @@ Plug 'yegappan/mru'
 Plug 'github/copilot.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 "below from https://pragmaticpineapple.com/ultimate-vim-typescript-setup/
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
