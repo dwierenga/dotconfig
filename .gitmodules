@@ -4,3 +4,6 @@
 [submodule "vim/plugged/coc.nvim"]
 	path = vim/plugged/coc.nvim
 	url = git@github.com:neoclide/coc.nvim.git
+[submodule ".jira"]
+	path = .jira
+	url = git@github.com:dwierenga/jira.git
