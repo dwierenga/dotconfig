@@ -26,7 +26,5 @@ save_to_clipboard = true
 [window]
 opacity = 1.0
 option_as_alt = "Both"
-
-[window.padding]
-x = 5 
-y = 5
+padding.x = 0
+padding.y = 0
