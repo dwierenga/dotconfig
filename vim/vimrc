@@ -2,10 +2,10 @@
 " the basics 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-set visualbell 
+set visualbell
 set laststatus=2 noruler
 set number wildmenu wildoptions=pum wildmode=list,longest,full showmatch
-set hidden splitright splitbelow autochdir 
+set hidden splitright splitbelow autochdir
 set linebreak breakindent showbreak=⮑\  textwidth=120
 set shiftwidth=4 softtabstop=4 expandtab shiftround
 set encoding=utf8
@@ -21,7 +21,7 @@ set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+        silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -60,29 +60,45 @@ if has('gui')
     set guifont=hack_nerd_font_mono:h16
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " map \w to the window command
 nnoremap <Leader>w <C-w>
+
 "jump to the previous/next buffer
 nnoremap <Leader><Tab> :bnext<CR>
 nnoremap <Leader><S-Tab> :bprevious<CR>
-" use ctrl j/k to move a line up/down
+
+" use ctrl j/k to move a line up/down in normal or insert mode
 nnoremap <C-j> :m .+1<CR>==
+inoremap <C-j> <ESC>:m .+1<CR>==i
 nnoremap <C-k> :m .-2<CR>==
+inoremap <C-k> <ESC>:m .-2<CR>==i
+
+" use ctrl h/l to indent/unindent in normal or insert mode 
+nnoremap <C-l> >l
+inoremap <C-l> <C-o>>l
+nnoremap <C-h> <h
+inoremap <C-h> <C-o><h
+
+" edit my vimrc file
 nnoremap <leader>M :e $MYVIMRC<CR>
+
+" mappings to load utility windows
 nnoremap == :Mru<CR>
 nnoremap __ :NERDTreeToggle<CR>
 nnoremap <Leader>e :NERDTreeToggle<CR>
 nnoremap ++ :ls<CR>:b<Space>
 nnoremap <Leader>b :ls<CR>:b<Space>
-"keeps the current visual block selection active after changing indent with
-"'<' or '>'. Usually the visual block selection is lost after you shift it, which is incredibly annoying.
+
+"keeps the current visual block selection active after changing indent with "'<' or '>'.
+"Usually the visual block selection is lost after you shift it, which is incredibly annoying.
 vnoremap > >gv
 vnoremap < <gv
+
 "For quick recordings just type qq to start recording, then q  to stop
 "to play back the recording you just type Q
 nnoremap Q @q
