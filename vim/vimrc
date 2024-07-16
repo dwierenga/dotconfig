@@ -100,6 +100,10 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 vnoremap > >gv
 vnoremap < <gv
 
+"copy to clipboard
+vnoremap <Leader>c "+y
+
+
 "For quick recordings just type qq to start recording, then q  to stop
 "to play back the recording you just type Q
 nnoremap Q @q
