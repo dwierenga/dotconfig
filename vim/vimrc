@@ -51,6 +51,8 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=light
 colorscheme nord
+set cursorline
+hi CursorLine cterm=underline ctermbg=NONE
 set statusline=[buf#\ %n\]\ \ %F\ %r%q%m%=ASCII:%b\ HEX:0x%B\|\ %y\ C:%c\ R:%l/%L\ 
 let g:netrw_winsize = 35
 let g:netrw_liststyle=3
