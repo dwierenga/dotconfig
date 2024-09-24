@@ -17,6 +17,9 @@ filetype plugin on
 set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+if $IS_ANSIBLE_PROJECT == 'yes'
+    setlocal filetype=ansible
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set up the vim-plug plugin to manage our other plugins https://github.com/junegunn/vim-plug
