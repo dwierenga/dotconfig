@@ -112,10 +112,16 @@ vnoremap < <gv
 "copy to clipboard
 vnoremap <Leader>c "+y
 
-
+nnoremap <Leader>n :w<CR>:cn<CR>
+nnoremap <Leader>p :w<CR>:cp<CR>
 "For quick recordings just type qq to start recording, then q  to stop
 "to play back the recording you just type Q
 nnoremap Q @q
+nnoremap <Leader>i @i
+nnoremap <Leader>a @a
+nnoremap <Leader>q @q
+
+set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 
 "CoC
 let g:coc_global_extensions = ['coc-tsserver'] " CoC extension for typescript server
@@ -133,6 +139,8 @@ nmap <silent> <Leader><space> <Plug>(coc-diagnostic-next-error)
 " Add `:Format` command to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')
 nmap <Leader>F :Format<CR>
+
+nnoremap <Leader>d :Gvdiffsplit<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -163,4 +171,27 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " automatically populate the location list with the Coc diagnostic results on buffer save
 autocmd BufWritePost * call timer_start(1000, { tid -> execute('execute "CocDiagnostics" | execute "botright lwindow" | execute "wincmd p"') })
 
+
+" from https://stackoverflow.com/a/43956812/897612
+" create a self-clearing autocommand group called 'qf'
+augroup qf
+    " clear all autocommands in this group
+    autocmd!
+
+    " do :cwindow if the quickfix command doesn't start
+    " with a 'l' (:grep, :make, etc.)
+    autocmd QuickFixCmdPost [^l]* cwindow
+
+    " do :lwindow if the quickfix command starts with
+    " a 'l' (:lgrep, :lmake, etc.)
+    autocmd QuickFixCmdPost l*    lwindow
+
+    " do :cwindow when Vim was started with the '-q' flag
+    autocmd VimEnter        *     cwindow
+augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+command KillTrail :call KillWhiteSpace()
+function KillWhiteSpace()
+    :%s/ \+$//
+endfunction
