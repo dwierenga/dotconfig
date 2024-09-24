@@ -36,3 +36,6 @@ opacity = 1.0
 option_as_alt = "Both"
 padding.x = 0
 padding.y = 0
+
+[bell]
+command = { program = "osascript", args = ["-e", "beep"] }
