@@ -9,7 +9,7 @@ blinking = "Off"
 shape = "Block"
 
 [env]
-TERM = "alacritty"
+TERM = "xterm-256color"
 
 [font]
 size = 16
