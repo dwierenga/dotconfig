@@ -47,10 +47,14 @@ Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nordtheme/vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'glench/vim-jinja2-syntax'
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
+let g:gitgutter_grep = 'rg' 
+let g:gitgutter_use_location_list = 1
+let g:gitgutter_set_sign_backgrounds = 1
+let g:gitgutter_sign_modified = '∆'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colors and visual setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
