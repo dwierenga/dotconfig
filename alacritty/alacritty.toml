@@ -13,10 +13,18 @@ TERM = "xterm-256color"
 
 [font]
 size = 16
-normal.family = "Courier Prime"
-bold.family = "Courier Prime"
-italic.family = "Courier Prime"
-bold_italic.family = "Courier Prime"
+#normal.family = "Courier Prime"
+#bold.family = "Courier Prime"
+#italic.family = "Courier Prime"
+#bold_italic.family = "Courier Prime"
+#normal.family = "MartianMono Nerd Font"
+#bold.family = "MartianMono Nerd Font"
+#italic.family = "MartianMono Nerd Font"
+#bold_italic.family = "MartianMono Nerd Font"
+normal.family = "Fira Code"
+bold.family = "Fira Code"
+italic.family = "Fira Code"
+bold_italic.family = "Fira Code"
 
 
 
