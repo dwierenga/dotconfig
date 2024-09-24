@@ -11,6 +11,8 @@ set shiftwidth=4 softtabstop=4 expandtab shiftround
 set encoding=utf8
 let mapleader=" "
 set listchars=tab:\|_\|,precedes:<,nbsp:+,eol:√,trail:»
+set updatetime=100
+filetype on
 filetype plugin on
 set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
